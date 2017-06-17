@@ -1,26 +1,26 @@
 const React = require('react')
 
 class ReadImg extends React.Component {
-  static defaultProps : {
-    show  : false,
-    result: null,
-    style : {}
-  }
   onchange(){
-    const cb = this.props.result || function (a){
-      console.log(a)
-    }
+    const cb = this.props.result
+    const isBlod = this.props.isBlod
     const file = this.refs.id.files[0]
     if(!/image\/\w+/.test(file.type))return cb(false);
     let reader = new FileReader()
     reader.readAsDataURL(file);
     reader.onload=function(e){
-      cb(this.result)
+      let result = this.result
+      if(isBlod) result = toUrl(result)
+      return cb(this.result)
     }
   }
+
+  toUrl(result){
+    return result
+  }
   render() {
-    const showcss = show ? {opacity: 0} : {}
     const {show, style} = this.props
+    const showcss = show ? {} : {opacity: 0}
 
     return (
       <div style={ style }>
@@ -28,6 +28,13 @@ class ReadImg extends React.Component {
       </div>
     );
   }
+}
+
+ReadImg.defaultProps = {
+  show  : true,
+  result: a => console.log(a),
+  style : {},
+  isBlod: false
 }
 
 
