@@ -1,0 +1,29 @@
+{
+  "name": "react-read-img",
+  "version": "1.0.0",
+  "description": "react 读取 图片",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoBey/react-read-img.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoBey/react-read-img/issues"
+  },
+  "homepage": "https://github.com/NoBey/react-read-img#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "jsx-loader": "^0.13.2",
+    "react": "^15.6.1"
+  }
+}
