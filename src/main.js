@@ -19,12 +19,12 @@ class ReadImg extends React.Component {
     return result
   }
   render() {
-    const {show, style} = this.props
+    const {show, style, inputStyle} = this.props
     const showcss = show ? {} : {opacity: 0}
 
     return (
       <div style={ style }>
-        <input style={ showcss } ref="id" type="file" onChange={this.onchange.bind(this)} />
+        <input style={{ ...showcss, ...inputStyle}} ref="id" type="file" onChange={this.onchange.bind(this)} />
       </div>
     );
   }
@@ -34,7 +34,8 @@ ReadImg.defaultProps = {
   show  : true,
   result: a => console.log(a),
   style : {},
-  isBlod: false
+  isBlod: false,
+  inputStyle: {width: '100%', height: '100%'}
 }
 
 

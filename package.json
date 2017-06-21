@@ -1,6 +1,6 @@
 {
   "name": "react-read-img",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "react 读取 图片",
   "main": "lib/index.js",
   "scripts": {
@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/NoBey/react-read-img#readme",
   "devDependencies": {
-    "webpack": "^2.6.1"
-  },
-  "dependencies": {
+    "webpack": "^2.6.1",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
     "babel-preset-react": "^6.24.1",
-    "jsx-loader": "^0.13.2",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "dependencies": {
     "react": "^15.6.1"
   }
 }
