@@ -1,6 +1,6 @@
 {
   "name": "react-read-img",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "react 读取 图片",
   "main": "lib/index.js",
   "scripts": {
