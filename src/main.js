@@ -12,7 +12,7 @@ class ReadImg extends React.Component {
     const cb = this.props.result
     const { isBlod, easy} = this.props
     const that = this
-    const file = this.refs.id.files[0]
+    const file = document.getElementById('_ReactReadImg').files[0]
     if(!/image\/\w+/.test(file.type))return cb(false);
     let reader = new FileReader()
     reader.readAsDataURL(file)
@@ -33,7 +33,7 @@ class ReadImg extends React.Component {
     const showcss = show ? {} : {opacity: 0}
     return (
       <div style={ style }>
-        { easyShow ? '' : <input style={{ ...showcss, ...inputStyle}} ref="id" type="file" onChange={this.onchange.bind(this)} /> }
+        { easyShow ? '' : <input style={{ ...showcss, ...inputStyle}} id='_ReactReadImg' type="file" onChange={this.onchange.bind(this)}  accept="image/jpg,image/jpeg,image/png,image/gif" /> }
         { (easy && easyShow) ?  <img style={{width: '100%', height: '100%'}} src={easyImg} onClick={()=>this.setState({easyShow: false})} /> : '' }
       </div>
     );
