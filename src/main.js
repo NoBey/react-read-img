@@ -32,7 +32,7 @@ class ReadImg extends React.Component {
     const { easyShow, easyImg } = this.state
     const showcss = show ? {} : {opacity: 0}
     return (
-      <div style={ style }>
+      <div {...this.props} style={ style }>
         { easyShow ? '' : <input style={{ ...showcss, ...inputStyle}} id={ id ? id : '_ReactReadImg' } type="file" onChange={this.onchange.bind(this)}  accept="image/jpg,image/jpeg,image/png,image/gif" /> }
         { (easy && easyShow) ?  <img style={{width: '100%', height: '100%'}} src={easyImg} onClick={()=>this.setState({easyShow: false})} /> : '' }
       </div>
